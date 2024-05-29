@@ -91,8 +91,11 @@ This repository contains a Python script for performing 3D reconstruction from a
 
 ## Example from RGB Scene
 ![One Frame from RGB video used to recreate scene](Results/Sample%20Video%20Frame.png)
+Point Cloud Generated from Dense Reconstruction:
 ![Point Cloud Generated from Dense Reconstruction](Results/Dense%20Point%20Cloud.png)
+[Reconstruction with lower noise filtering to capture more of the scene:
 ![Reconstruction with lower noise filtering to capture more of the scene](Results/Higher%20Scene%20Capture.png)
+Complete Mesh with high noise filtering:
 ![Complete Mesh with high noise filtering](Results/Mesh_Sample.png)
 ## Acknowledgements
 
