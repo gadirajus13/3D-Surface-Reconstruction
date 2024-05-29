@@ -52,10 +52,10 @@ This repository contains a Python script for performing 3D reconstruction from a
 - Features are extracted from the images to create a COLMAP database.
 - Feature matching is performed to establish correspondences between images.
 - Incremental mapping is performed to estimate camera poses and generate a sparse 3D model.
-- The camera poses are also extracted from the sparse model if needed. (Can be used with open3D to get specific viewpoints)
+- The camera poses are also extracted from the sparse model if needed. (Can be used with Open3D to get specific viewpoints)
 
 2. **Dense Reconstruction:**
-- The dense reconstruction step takes the sparse reconstruction data and the color images to generate a dense point cloud. (Requires cuda compilation of COLMAP)
+- The dense reconstruction step takes the sparse reconstruction data and the color images to generate a dense point cloud. (Requires CUDA compilation of COLMAP)
 - COLMAP's patch match stereo algorithm is used to estimate depth maps for each image pair.
 - The depth maps are then merged to create a dense point cloud representing the scene.
 - This step provides a detailed representation of the scene geometry.
@@ -66,10 +66,8 @@ This repository contains a Python script for performing 3D reconstruction from a
 - This step helps to reduce noise and improve the quality of the point cloud.
 
 4. **Point Cloud Segmentation:**
-- The filtered point cloud is segmented into different objects using DBSCAN clustering.
-- DBSCAN is a density-based clustering algorithm that groups together points that are closely packed.
-- By adjusting the clustering parameters (`eps` and `min_points`), the script separates the point cloud into distinct objects.
-- This step allows for individual processing and reconstruction of each object.
+- The filtered point cloud is segmented into different objects using DBSCAN clustering, which is a density-based clustering algorithm that groups together points that are closely packed.
+- By adjusting the clustering parameters (`eps` and `min_points`), the script separates the point cloud into distinct objects, allowing for individual processing and reconstruction of each object.
 
 5. **Surface Reconstruction:**
 - For each segmented object, surface reconstruction is performed using the Poisson surface reconstruction algorithm.
@@ -77,8 +75,7 @@ This repository contains a Python script for performing 3D reconstruction from a
 - This step generates a triangular mesh representation of each object's surface.
 
 6. **Mesh Refinement:**
-- The reconstructed meshes may have some artifacts or noise.
-- Laplacian and Taubin smoothing techniques are applied to refine the meshes.
+- As the reconstructed meshes usually contain some artifacts or noise, Laplacian and Taubin smoothing techniques are applied to refine the meshes.
 - Laplacian smoothing smooths the mesh by averaging the positions of neighboring vertices.
 - Taubin smoothing is a two-step smoothing process that helps to preserve mesh details while reducing noise.
 - Additionally, degenerate triangles, duplicated vertices, and non-manifold edges are removed to improve mesh quality.
