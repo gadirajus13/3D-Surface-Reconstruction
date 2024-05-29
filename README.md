@@ -93,9 +93,9 @@ This repository contains a Python script for performing 3D reconstruction from a
 - The final merged mesh is saved as `dense_reconstruction_mesh.ply` using the PLY file format.
 
 ## Example from RGB Scene
-![One Frame from RGB video used to recreate scene]('Results/Sample Video Frame.png')
-![Point Cloud Generated from Dense Reconstruction]('Results/Dense Point Cloud.png')
-![Reconstruction with lower noise filtering to capture more of the scene]('Results/Higher Scene Capture.png')
+![One Frame from RGB video used to recreate scene](Results/Sample%20Video%20Frame.png)
+![Point Cloud Generated from Dense Reconstruction](Results/Dense%20Point%20Cloud.png)
+![Reconstruction with lower noise filtering to capture more of the scene](Results/Higher%20Scene%20Capture.png)
 ![Complete Mesh with high noise filtering](Results/Mesh_Sample.png)
 ## Acknowledgements
 
