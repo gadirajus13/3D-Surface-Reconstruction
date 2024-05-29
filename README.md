@@ -10,7 +10,7 @@ This repository contains a Python script for performing 3D reconstruction from a
 - Point cloud segmentation using DBSCAN clustering to separate objects
 - Surface reconstruction using Poisson surface reconstruction
 - Mesh refinement using Laplacian and Taubin smoothing
-- Visualization of the reconstructed objects and the final merged mesh
+- Visualization of the reconstructed objects and the final merged scene mesh
 
 ## Dependencies
 
