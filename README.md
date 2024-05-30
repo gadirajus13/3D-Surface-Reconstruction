@@ -14,8 +14,7 @@ This repository contains a Python script for performing 3D reconstruction from a
 
 ## Dependencies
 
-- Python 3.x
-- COLMAP
+- Python 3.11
 - pycolmap
 - Open3D
 - NumPy
