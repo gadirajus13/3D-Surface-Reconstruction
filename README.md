@@ -56,13 +56,11 @@ This repository contains a Python script for performing 3D reconstruction from a
 2. **Dense Reconstruction:**
 - The dense reconstruction step takes the sparse reconstruction data and the color images to generate a dense point cloud. (Requires CUDA compilation of COLMAP)
 - COLMAP's patch match stereo algorithm is used to estimate depth maps for each image pair.
-- The depth maps are then merged to create a dense point cloud representing the scene.
-- This step provides a detailed representation of the scene geometry.
+- The depth maps are then merged to create a dense point cloud representing the scene which provides a detailed representation of the scene geometry.
 
 3. **Point Cloud Filtering:**
 - The dense point cloud generated from the previous step may contain noise and outliers.
-- Statistical outlier removal is applied to the point cloud to remove points that deviate significantly from their neighbors.
-- This step helps to reduce noise and improve the quality of the point cloud.
+- Statistical outlier removal is applied to the point cloud to remove points that deviate significantly from their neighbors to reduce noise and improve the quality of the point cloud.
 
 4. **Point Cloud Segmentation:**
 - The filtered point cloud is segmented into different objects using DBSCAN clustering, which is a density-based clustering algorithm that groups together points that are closely packed.
